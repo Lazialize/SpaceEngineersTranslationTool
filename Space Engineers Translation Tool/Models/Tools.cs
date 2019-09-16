@@ -91,6 +91,19 @@ namespace Space_Engineers_Translation_Tool.Models
 
                 foreach (var record in records)
                 {
+                    if (!toEnglish)
+                    {
+                        if (IsItemTranslationEnabled)
+                        {
+                            if (record.Key.Contains("DisplayName_Item_")) continue;
+                        }
+
+                        if (IsBlockTranslationEnabled)
+                        {
+                            if (record.Key.Contains("DisplayName_Block_")) continue;
+                        }
+                    }
+
                     try
                     {
                         await Task.Run(() => applier.Replace(record.Key, toEnglish ? record.EnglishValue : record.Value));
@@ -143,7 +156,8 @@ namespace Space_Engineers_Translation_Tool.Models
             TranslationFiles = Converter.Convert(ListFileLoader.LoadAll());
             ProgressMaxValue = 100;
             ProgressCurrentValue = 0;
-            GetInstalledLocation();
+
+            if (string.IsNullOrEmpty(SpaceEngineersDirectory)) GetInstalledLocation();
 
             IsBlockTranslationEnabled = Config.ConfigData.IsBlockTranslationEnabled;
             IsItemTranslationEnabled = Config.ConfigData.IsItemTranslationEnabled;
