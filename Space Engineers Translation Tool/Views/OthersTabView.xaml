@@ -11,8 +11,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Margin="2" Content="{Binding NotImplemented}"/>
-                <Button Grid.Column="1" Margin="2" Content="{Binding NotImplemented}"/>
+                <Button Grid.Column="0" Margin="2" IsEnabled="{Binding IsProgress}" Content="{Binding ExportXml}" Command="{Binding ExportXmlCommand}"/>
+                <Button Grid.Column="1" Margin="2" IsEnabled="{Binding IsProgress}" Content="{Binding ExportCsv}" Command="{Binding ExportCsvCommand}"/>
             </Grid>
         </GroupBox>
         <TextBlock FontSize="11" HorizontalAlignment="Center" Text="{Binding Copyright}"/>

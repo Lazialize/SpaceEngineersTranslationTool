@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
 using CsvHelper;
 using Microsoft.Win32;
 using Prism.Mvvm;
@@ -136,9 +140,66 @@ namespace Space_Engineers_Translation_Tool.Models
             IsProgress = false;
         }
 
-        public void RevertToEnglish()
+        public async void ExportXml()
         {
-            throw new NotImplementedException();
+            IsProgress = true;
+
+            if (!CheckFileExistence())
+            {
+                MessageBox.Show("ファイルが存在しません。\nダウンロードを行ってください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            foreach (var translationFile in TranslationFiles)
+            {
+                var xml = new XElement("root");
+                var reader =
+                    new CsvReader(new StreamReader($@"{DownloadDirectoryName}\{translationFile.Name}.csv"));
+                reader.Configuration.HasHeaderRecord = false;
+                reader.Configuration.RegisterClassMap<TranslationSourceMap>();
+
+                reader.Parser.Read();
+                reader.Parser.Read();
+
+                var records = reader.GetRecords<TranslationSource>().ToList();
+
+                ProgressCurrentValue = 0;
+                ProgressMaxValue = records.Count();
+
+                foreach (var record in records)
+                {
+                    await Task.Run(() =>
+                    {
+                        var data = new XElement("data",
+                            new XAttribute("name", record.Key),
+                            new XElement("value", record.EnglishValue));
+                        data.SetAttributeValue(XNamespace.Xml + "space", "preserve");
+                        xml.Add(data);
+
+                        // 処理が早すぎて画面の更新が発生しない。
+                        Thread.Sleep(1);
+                    });
+                    StatusMessage = $"{record.Key}を追加";
+                    ProgressCurrentValue += 1;
+
+                }
+
+                var xdoc = new XDocument(xml);
+
+                if (!Directory.Exists(@"Export\Xml"))
+                {
+                    Directory.CreateDirectory(@"Export\Xml");
+                }
+
+                xdoc.Save(new StreamWriter($@"Export\Xml\{translationFile.Name}.xml"));
+                StatusMessage = "Xmlのエクスポート完了";
+            }
+            IsProgress = false;
+        }
+
+        public void ExportCsv()
+        {
+
         }
 
         public void BrowseFolder()

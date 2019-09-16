@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.SqlServer.Server;
 using Space_Engineers_Translation_Tool.Models.Objects;
 
 namespace Space_Engineers_Translation_Tool.Models.Utils
