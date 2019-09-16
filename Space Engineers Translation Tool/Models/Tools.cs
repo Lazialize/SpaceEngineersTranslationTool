@@ -193,6 +193,7 @@ namespace Space_Engineers_Translation_Tool.Models
 
                 xdoc.Save(new StreamWriter($@"Export\Xml\{translationFile.Name}.xml"));
                 StatusMessage = "Xmlのエクスポート完了";
+                reader.Dispose();
             }
             IsProgress = false;
         }
