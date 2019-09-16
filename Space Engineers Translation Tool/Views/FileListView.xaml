@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Space_Engineers_Translation_Tool.Views.FileListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <ListView ItemsSource="{Binding TranslationFiles.Value}">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn DisplayMemberBinding="{Binding Name}">
+                    <GridViewColumnHeader Content="{Binding HeaderFileName}" IsEnabled="False" Foreground="Black"/>
+                </GridViewColumn>
+                <GridViewColumn DisplayMemberBinding="{Binding LastModifyTime}">
+                    <GridViewColumnHeader Content="{Binding HeaderLastModifyTime}" IsEnabled="False" Foreground="Black"/>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
+    </ListView>
+</UserControl>

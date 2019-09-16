@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Space_Engineers_Translation_Tool.Views.SettingsTabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <StackPanel>
+        <CheckBox Content="{Binding CheckBoxTranslateItem}" IsChecked="{Binding IsItemTranslationEnabled.Value, Mode=TwoWay}"/>
+        <CheckBox Content="{Binding CheckBoxTranslateBlock}" IsChecked="{Binding IsBlockTranslationEnabled.Value, Mode=TwoWay}"/>
+        <Separator Margin="5"/>
+        <TextBlock Margin="2" Text="{Binding TextBlockSpaceEngineersDirectory}"/>
+        <TextBox Margin="2" Text="{Binding SpaceEngineersDirectory.Value, Mode=TwoWay}"/>
+        <Button Margin="2" Content="{Binding ButtonBrowse}" Command="{Binding BrowseFolderCommand}"/>
+    </StackPanel>
+</UserControl>

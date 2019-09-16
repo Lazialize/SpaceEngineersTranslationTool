@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Space_Engineers_Translation_Tool.Views.StatusBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <StatusBar>
+        <StatusBarItem>
+            <TextBlock Text="{Binding StatusMessage.Value}"/>
+        </StatusBarItem>
+
+        <StatusBarItem HorizontalContentAlignment="Right">
+            <ProgressBar Height="15" Width="200" Maximum="{Binding ProgressBarMaxValue.Value}" Value="{Binding ProgressBarCurrentValue.Value}"/>
+        </StatusBarItem>
+    </StatusBar>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Space_Engineers_Translation_Tool.Views.ToolTabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Margin="1" IsEnabled="{Binding IsProgress.Value}" Content="{Binding ButtonDownload}" Command="{Binding DownloadCommand}"/>
+        <Button Grid.Row="1" Margin="1" IsEnabled="{Binding IsProgress.Value}" Content="{Binding ButtonApplyTranslation}" Command="{Binding ApplyTranslationCommand}"/>
+        <Button Grid.Row="2" Margin="1" IsEnabled="{Binding IsProgress.Value}" Content="{Binding ButtonApplyFont}" Command="{Binding ApplyFontsCommand}"/>
+        <Button Grid.Row="3" Margin="1" IsEnabled="{Binding IsProgress.Value}" Content="{Binding ButtonRevertToEnglish}" Command="{Binding RevertToEnglishCommand}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "MyTexts",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=531533600",
+    "Path": "\\Content\\Data\\Localization\\MyTexts.resx"
+  },
+  {
+    "Name": "MyCommonTexts",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=1956035366",
+    "Path": "\\Content\\Data\\Localization\\Common\\MyCommonTexts.resx"
+  },
+  {
+    "Name": "MyCoreTexts",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=5188407",
+    "Path": "\\Content\\Data\\Localization\\CoreTexts\\MyCoreTexts.resx"
+  }
+]

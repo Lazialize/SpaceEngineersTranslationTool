@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "OfficialCampaign01Common",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=808638650",
+    "Path": "\\Content\\Scenarios\\The First Jump\\Localization\\OfficialCampaign01Common.resx"
+  },
+  {
+    "Name": "OfficialCampaign01M1",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=894243556",
+    "Path": "\\Content\\Scenarios\\The First Jump\\Localization\\OfficialCampaign01M1.resx"
+  },
+  {
+    "Name": "OfficialCampaign01M2",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=979916349",
+    "Path": "\\Content\\Scenarios\\The First Jump\\Localization\\OfficialCampaign01M2.resx"
+  },
+  {
+    "Name": "OfficialCampaign01M3",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=197386136",
+    "Path": "\\Content\\Scenarios\\The First Jump\\Localization\\OfficialCampaign01M3.resx"
+  },
+  {
+    "Name": "OfficialCampaign01M4",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=1574849974",
+    "Path": "\\Content\\Scenarios\\The First Jump\\Localization\\OfficialCampaign01M4.resx"
+  },
+  {
+    "Name": "OfficialCampaign01M5",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=1352894053",
+    "Path": "\\Content\\Scenarios\\The First Jump\\Localization\\OfficialCampaign01M5.resx"
+  },
+  {
+    "Name": "TheFirstJump_Menu",
+    "Url": "https://docs.google.com/spreadsheets/d/1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34/export?format=csv&id=1YY6mLAkeNZeuL3LwGfJQZUl7xppquBx1xFlqyPz-n34&gid=695560755",
+    "Path": "\\Content\\Scenarios\\The First Jump\\Localization\\TheFirstJump_Menu.resx"
+  }
+]
