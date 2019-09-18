@@ -97,14 +97,14 @@ namespace Space_Engineers_Translation_Tool.Models
                 {
                     if (!toEnglish)
                     {
-                        if (IsItemTranslationEnabled)
+                        if (record.Key.Contains("DisplayName_Item_"))
                         {
-                            if (record.Key.Contains("DisplayName_Item_")) continue;
+                            if (!IsItemTranslationEnabled) continue;
                         }
 
-                        if (IsBlockTranslationEnabled)
+                        if (record.Key.Contains("DisplayName_Block_"))
                         {
-                            if (record.Key.Contains("DisplayName_Block_")) continue;
+                            if (!IsBlockTranslationEnabled) continue;
                         }
                     }
 
@@ -199,6 +199,11 @@ namespace Space_Engineers_Translation_Tool.Models
         }
 
         public void ExportCsv()
+        {
+
+        }
+
+        public void ExportDiffXml()
         {
 
         }
