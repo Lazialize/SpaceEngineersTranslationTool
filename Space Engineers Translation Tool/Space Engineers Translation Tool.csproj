@@ -199,6 +199,8 @@
     <None Include="config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ListFiles\never_surrender.json" />
+    <None Include="ListFiles\learning_to_survive.json" />
     <None Include="ListFiles\the_first_jump.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
